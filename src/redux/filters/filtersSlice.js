@@ -1,4 +1,4 @@
-import { INITIAL_STATE } from './constans';
+import { INITIAL_STATE } from '../constans';
 import { createSlice } from '@reduxjs/toolkit';
 
 const filtersSlice = createSlice({

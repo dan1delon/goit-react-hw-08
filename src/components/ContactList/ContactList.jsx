@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import ContactItem from '../ContactItem/ContactItem';
-import { selectFilteredContacts } from '../../redux/contactsSlice';
+import { selectFilteredContacts } from '../../redux/contacts/contactsSlice';
 
 import css from './ContactList.module.css';
 
@@ -9,7 +9,12 @@ const ContactList = () => {
 
   return (
     <ul className={css.list}>
-      {filteredContacts &&
+      {Array.isArray(filteredContacts) && filteredContacts.length === 0 && (
+        <li>
+          <p className={css.paragraph}>There are no contacts here yet.</p>
+        </li>
+      )}
+      {Array.isArray(filteredContacts) &&
         filteredContacts.map(contact => {
           return (
             <li key={contact.id} className={css.listItem}>

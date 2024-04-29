@@ -1,19 +1,19 @@
-import { LineWave } from 'react-loader-spinner';
+import { Triangle } from 'react-loader-spinner';
 import css from './Loader.module.css';
 
 const Loader = () => {
   return (
-    <LineWave
-      visible={true}
-      height="300"
-      width="300"
-      color="#4fa94d"
-      ariaLabel="line-wave-loading"
-      wrapperClass={css.wrapper}
-      firstLineColor="black"
-      middleLineColor="black"
-      lastLineColor="black"
-    />
+    <div className={css.background}>
+      <Triangle
+        visible={true}
+        height="120"
+        width="120"
+        color="#0081CF"
+        ariaLabel="triangle-loading"
+        wrapperStyle={{}}
+        wrapperClass={css.wrapper}
+      />
+    </div>
   );
 };
 
