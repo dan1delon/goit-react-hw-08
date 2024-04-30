@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 
 import css from './LoginForm.module.css';
-import { loginAPI } from '../../redux/auth/authOps';
+import { loginAPI } from '../../redux/auth/operations';
 
 const initialFormValues = {
   email: '',

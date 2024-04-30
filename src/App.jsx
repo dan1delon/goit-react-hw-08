@@ -9,7 +9,7 @@ import ContactsPage from './pages/ContactsPage/ContactsPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import Loader from './components/Loader/Loader';
 import Layout from './components/Layout/Layout';
-import { refreshUserAPI } from './redux/auth/authOps';
+import { refreshUserAPI } from './redux/auth/operations';
 import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 

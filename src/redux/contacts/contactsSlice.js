@@ -1,6 +1,6 @@
 import { INITIAL_STATE } from '../constants.js';
 import { createSelector, createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { addContact, deleteContact, fetchContacts } from './contactsOps';
+import { addContact, deleteContact, fetchContacts } from './operations';
 import { selectContacts } from './contactsSelectors';
 import { selectFilter } from '../filters/filterSelectors.js';
 

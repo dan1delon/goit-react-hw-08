@@ -11,7 +11,7 @@ import {
 } from '../../redux/contacts/contactsSelectors';
 import css from './ContactsPage.module.css';
 import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contacts/contactsOps';
+import { fetchContacts } from '../../redux/contacts/operations';
 import { Toaster } from 'react-hot-toast';
 
 const ContactsPage = () => {

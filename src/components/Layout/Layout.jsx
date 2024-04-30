@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AppBar from '../AppBar/AppBar';
 import { useDispatch } from 'react-redux';
-import { logoutAPI } from '../../redux/auth/authOps';
+import { logoutAPI } from '../../redux/auth/operations';
 import ModalLogout from '../Modal/ModalLogout';
 
 const Layout = ({ children }) => {

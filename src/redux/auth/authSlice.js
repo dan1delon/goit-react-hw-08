@@ -1,5 +1,5 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { loginAPI, logoutAPI, refreshUserAPI, registerAPI } from './authOps';
+import { loginAPI, logoutAPI, refreshUserAPI, registerAPI } from './operations';
 
 const AUTH_INITIAL_STATE = {
   user: {

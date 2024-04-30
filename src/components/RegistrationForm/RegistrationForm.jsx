@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import css from './RegistrationForm.module.css';
-import { registerAPI } from '../../redux/auth/authOps';
+import { registerAPI } from '../../redux/auth/operations';
 import { useDispatch } from 'react-redux';
 
 const initialFormValues = {
