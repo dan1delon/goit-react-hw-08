@@ -1,16 +1,15 @@
 .wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 15px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .headline {
-  margin-top: 80px;
   text-align: center;
   margin-bottom: 50px;
-  color: white;
   text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  color: white;
   font-size: 32px;
 }

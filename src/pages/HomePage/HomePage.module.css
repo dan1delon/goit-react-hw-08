@@ -7,7 +7,6 @@
 
 .wrapperContent {
   max-width: 768px;
-  margin-top: 70px;
   margin-bottom: 20px;
   padding: 0 15px 15px 15px;
 }
@@ -33,13 +32,12 @@
   color: white;
   text-align: center;
   padding: 10px 0;
+  display: none;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .copyright {
-    position: fixed;
-    margin-top: 15px;
-    bottom: 0;
+    display: block;
   }
 }
 

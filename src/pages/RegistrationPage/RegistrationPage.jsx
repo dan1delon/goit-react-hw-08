@@ -5,7 +5,7 @@ const RegistrationPage = () => {
   return (
     <div className={css.wrapperMain}>
       <div className={css.wrapper}>
-        <h2 className={css.headline}>Register a new account</h2>
+        <h2 className={css.headline}>Register account</h2>
         <RegistrationForm />
       </div>
     </div>
