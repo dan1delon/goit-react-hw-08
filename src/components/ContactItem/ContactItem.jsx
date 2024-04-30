@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { deleteContact } from '../../redux/contacts/contactsOps';
 import css from './ContactItem.module.css';
 import { useDispatch } from 'react-redux';
@@ -8,6 +9,9 @@ const ContactItem = ({ contact }) => {
   const onDelete = id => {
     const action = deleteContact(id);
     dispatch(action);
+    toast('Successfully deleted!', {
+      icon: '🔥',
+    });
   };
 
   return (

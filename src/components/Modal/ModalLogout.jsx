@@ -1,12 +1,11 @@
 import css from './ModalLogout.module.css';
+import CloseIcon from '@mui/icons-material/Close';
 
 const ModalLogout = ({ onLogout, onCloseModal }) => {
   return (
     <div className={css.backdrop}>
       <div className={css.modal}>
-        <button type="button" className={css.xBtn}>
-          X
-        </button>
+        <CloseIcon className={css.CloseIcon} onClick={onCloseModal} />
         <p className={css.title}>Log out?</p>
         <div className={css.btnWrap}>
           <button type="button" onClick={onLogout} className={css.btnYes}>

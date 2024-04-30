@@ -4,6 +4,7 @@ import { addContact } from '../../redux/contacts/contactsOps';
 import { useDispatch } from 'react-redux';
 
 import css from './ContactForm.module.css';
+import toast from 'react-hot-toast';
 
 const initialFormValues = {
   name: '',
@@ -27,6 +28,7 @@ const ContactForm = () => {
 
   const handleSubmit = (values, actions) => {
     onAddContact(values);
+    toast.success('Successfully added a contact!');
     actions.resetForm();
   };
 

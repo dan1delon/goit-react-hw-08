@@ -12,6 +12,7 @@ import {
 import css from './ContactsPage.module.css';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/contactsOps';
+import { Toaster } from 'react-hot-toast';
 
 const ContactsPage = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -25,6 +26,7 @@ const ContactsPage = () => {
 
   return (
     <>
+      <Toaster position="top-right" reverseOrder={false} />
       <div className={css.wrapper}>
         <h1 className={css.title}>Phone book</h1>
         <ContactForm />
