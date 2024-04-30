@@ -38,3 +38,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 207, 249, 1) 0%,
+    rgba(252, 176, 69, 1) 91%
+  );
+  height: 100%;
+}

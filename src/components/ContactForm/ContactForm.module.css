@@ -3,16 +3,18 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   border: none;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-  width: 400px;
+  max-width: 400px;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.733);
 }
 
 .labelWrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 5px;
   width: 300px;

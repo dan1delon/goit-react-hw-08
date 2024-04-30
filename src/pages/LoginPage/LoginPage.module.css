@@ -8,4 +8,7 @@
 .headline {
   text-align: center;
   margin-bottom: 50px;
+  text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  color: white;
+  font-size: 32px;
 }

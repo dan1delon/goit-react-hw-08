@@ -2,6 +2,7 @@ import { useState } from 'react';
 import AppBar from '../AppBar/AppBar';
 import { useDispatch } from 'react-redux';
 import { logoutAPI } from '../../redux/auth/authOps';
+import ModalLogout from '../Modal/ModalLogout';
 
 const Layout = ({ children }) => {
   const dispatch = useDispatch();
@@ -19,15 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       {isModalOpen && (
-        <div>
-          <p>Log out?</p>
-          <button type="button" onClick={onLogout}>
-            Yes
-          </button>
-          <button type="button" onClick={onCloseModal}>
-            No
-          </button>
-        </div>
+        <ModalLogout onLogout={onLogout} onCloseModal={onCloseModal} />
       )}
       <AppBar onOpenModal={onOpenModal} />
       <main>{children}</main>

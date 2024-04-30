@@ -13,20 +13,28 @@ const AppBar = ({ onOpenModal }) => {
   const userData = useSelector(selectUser);
 
   return (
-    <header>
+    <header className={css.wrapperMain}>
       <nav className={css.wrapper}>
-        <NavLink to="/" className={handleActiveLink}>
-          Home
-        </NavLink>
+        <div className={clsx({ [css.home]: !isLoggedIn })}>
+          <NavLink to="/" className={handleActiveLink}>
+            Home
+          </NavLink>
+        </div>
         {isLoggedIn ? (
           <>
             <NavLink to="/contacts" className={handleActiveLink}>
               Contacts
             </NavLink>
-            <div>
-              <span>Welcome, {userData.name}</span>
-              <button type="button" onClick={onOpenModal}>
-                Logout
+            <div className={css.welcomeWrap}>
+              <span className={css.welcome}>
+                Welcome, <span className={css.name}>{userData.name}</span>
+              </span>
+              <button
+                type="button"
+                onClick={onOpenModal}
+                className={css.buttonLogout}
+              >
+                Log out
               </button>
             </div>
           </>

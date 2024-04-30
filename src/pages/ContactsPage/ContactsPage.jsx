@@ -24,14 +24,17 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <div className={css.wrapper}>
-      <h1 className={css.title}>Phone book</h1>
-      <ContactForm />
-      <SearchBox />
-      {error && <ErrorMessage />}
-      {isLoading && <Loader />}
-      <ContactList />
-    </div>
+    <>
+      <div className={css.wrapper}>
+        <h1 className={css.title}>Phone book</h1>
+        <ContactForm />
+        <SearchBox />
+        {error && <ErrorMessage />}
+        {isLoading && <Loader />}
+        <ContactList />
+      </div>
+      <p className={css.copyright}>© Dan Klymenko | 2024</p>
+    </>
   );
 };
 
