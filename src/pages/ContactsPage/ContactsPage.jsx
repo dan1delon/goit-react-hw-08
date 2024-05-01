@@ -5,10 +5,7 @@ import ContactList from '../../components/ContactList/ContactList';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectError,
-  selectIsLoading,
-} from '../../redux/contacts/contactsSelectors';
+import { selectError, selectIsLoading } from '../../redux/contacts/selectors';
 import css from './ContactsPage.module.css';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';

@@ -1,8 +1,10 @@
-import { selectIsLoggedIn, selectUser } from '../../redux/auth/authSelectors';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import css from './AppBar.module.css';
 import clsx from 'clsx';
+import AuthNav from '../AuthNav/AuthNav';
+import UserMenu from '../UserMenu/UserMenu';
+import Navigation from '../Navigation/Navigation';
 
 const handleActiveLink = ({ isActive }) => {
   return clsx(css.link, { [css.active]: isActive });
@@ -10,45 +12,19 @@ const handleActiveLink = ({ isActive }) => {
 
 const AppBar = ({ onOpenModal }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const userData = useSelector(selectUser);
 
   return (
     <header className={css.wrapperMain}>
-      <nav className={css.wrapper}>
-        <div className={clsx({ [css.home]: !isLoggedIn })}>
-          <NavLink to="/" className={handleActiveLink}>
-            Home
-          </NavLink>
-        </div>
+      <Navigation handleActiveLink={handleActiveLink}>
         {isLoggedIn ? (
-          <>
-            <NavLink to="/contacts" className={handleActiveLink}>
-              Contacts
-            </NavLink>
-            <div className={css.welcomeWrap}>
-              <span className={css.welcome}>
-                Welcome, <span className={css.name}>{userData.name}</span>
-              </span>
-              <button
-                type="button"
-                onClick={onOpenModal}
-                className={css.buttonLogout}
-              >
-                Log out
-              </button>
-            </div>
-          </>
+          <UserMenu
+            onOpenModal={onOpenModal}
+            handleActiveLink={handleActiveLink}
+          />
         ) : (
-          <>
-            <NavLink to="/register" className={handleActiveLink}>
-              Register
-            </NavLink>
-            <NavLink to="/login" className={handleActiveLink}>
-              Login
-            </NavLink>
-          </>
+          <AuthNav handleActiveLink={handleActiveLink} />
         )}
-      </nav>
+      </Navigation>
     </header>
   );
 };

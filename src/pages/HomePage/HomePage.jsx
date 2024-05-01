@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import css from './HomePage.module.css';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../../redux/auth/authSelectors';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
 
 const HomePage = () => {
   const IsLoggedIn = useSelector(selectIsLoggedIn);
