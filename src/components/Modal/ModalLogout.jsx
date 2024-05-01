@@ -3,7 +3,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 const ModalLogout = ({ onLogout, onCloseModal }) => {
   return (
-    <div className={css.backdrop}>
+    <div className={css.backdrop} onClick={onCloseModal}>
       <div className={css.modal}>
         <CloseIcon className={css.CloseIcon} onClick={onCloseModal} />
         <p className={css.title}>Log out?</p>
