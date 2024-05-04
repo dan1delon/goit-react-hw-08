@@ -45,6 +45,7 @@ export const refreshUserAPI = createAsyncThunk(
     try {
       const state = thunkApi.getState();
       const token = state.auth.token;
+      if (!token){return thunkApi.rejectWithValue('Token is not valid');}
       setToken(token);
 
       const { data } = await instance.get('/users/current');

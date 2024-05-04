@@ -12,18 +12,15 @@ import Layout from './components/Layout/Layout';
 import { refreshUserAPI } from './redux/auth/operations';
 import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import { selectIsLoggedIn, selectIsRefreshing } from './redux/auth/selectors';
+import { selectIsRefreshing } from './redux/auth/selectors';
 
 const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
-  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   useEffect(() => {
-    if (isLoggedIn) {
       dispatch(refreshUserAPI());
-    }
-  }, [dispatch, isLoggedIn]);
+  }, [dispatch ]);
 
   return (
     !isRefreshing && (
