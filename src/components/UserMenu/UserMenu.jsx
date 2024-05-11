@@ -6,6 +6,7 @@ import css from './UserMenu.module.css';
 const UserMenu = ({ onOpenModal, handleActiveLink }) => {
   const userData = useSelector(selectUser);
 
+  
   return (
     <div className={css.wrapper}>
       <span className={css.welcome}>
