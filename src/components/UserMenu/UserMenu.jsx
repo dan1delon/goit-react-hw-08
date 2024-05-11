@@ -9,7 +9,7 @@ const UserMenu = ({ onOpenModal, handleActiveLink }) => {
   return (
     <div className={css.wrapper}>
       <span className={css.welcome}>
-        Welcome, <span className={css.name}>{userData.name}</span>
+        Welcome, <span className={css.name}>{userData.name} 👋🏼</span>
       </span>
       <NavLink to="/contacts" className={handleActiveLink}>
         Contacts
